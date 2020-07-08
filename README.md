@@ -47,10 +47,10 @@ Verifica antes de correrlo que lo tengas. Si lo forkeaste, lo tendras alli :D.
 
 ### Pequeña interfaz del programa ⌨️
 
-_Desarrollo discontinuado_
+_Loading..._
 
 ```
-No se avanzara con la interfaz.
+Conforme avancen las versiones, se mejorara la interfaz.
 ```
 
 
@@ -67,6 +67,11 @@ _en sus versiones_:
 ## Versionado 📌
 
 Quiza se implemente [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles.
+
+
+## Releases 📌
+
+Podes ver las distintas versiones o releases dando clic en -> [Releases](https://github.com/caidevOficial/CuatraticApp_C/releases)
 
 ## Autor ✒️
 

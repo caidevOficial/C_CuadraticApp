@@ -29,7 +29,7 @@
 
 // MEJORA DEL FGETS
 int myGets(char *string, int longitud) {
-	int retorno=-1;
+	int success=-1;
 	char bufferString[4096];
 
 	if (string != NULL && longitud > 0) {
@@ -41,11 +41,11 @@ int myGets(char *string, int longitud) {
 			}
 			if(strnlen(bufferString,sizeof(bufferString)) <= longitud){
 				strncpy(string, bufferString, longitud);
-				retorno=0;
+				success=0;
 			}
 		}
 	}
-	return retorno;
+	return success;
 }
 
 //PARA VALIDAR ENTEROS
@@ -56,20 +56,20 @@ int myGets(char *string, int longitud) {
  * \return Retorna 1 (vardadero) si la cadena es numerica y 0 (falso) si no lo es
  */
 int isNumber(char *string, int limite) {
-	int retorno = 1;
+	int success = 1;
 	int i;
 	for (i = 0; i < limite && string[i] != '\0'; i++) {
 		if (i == 0 && (string[i] == '+' || string[i] == '-')) {
 			continue;
 		}
 		if (string[i] > '9' || string[i] < '0') {
-			retorno = 0;
+			success = 0;
 			break;
 		}
 		//CONTINUE
 	}
 	//BREAK
-	return retorno;
+	return success;
 }
 
 /**
@@ -78,26 +78,26 @@ int isNumber(char *string, int limite) {
  * \return Retorna 0 (EXITO) si se obtiene un numero entero y -1 (ERROR) si no
  */
 static int getInt(int* pResultado){
-    int retorno=-1;
+    int success=-1;
     char bufferString[50];
     if(	pResultado != NULL &&
     	getString(bufferString,sizeof(bufferString)) == 0 &&
     	isNumber(bufferString, sizeof(bufferString))) {
-		retorno=0;
+		success=0;
 		*pResultado = atoi(bufferString) ;
 
 	}
-    return retorno;
+    return success;
 }
 
 int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError,	int minimo, int maximo, int reintentos){
-	int retorno = 0;
+	int success = 0;
 	int bufferInt;
 	do{
 		printf("%s",mensaje);
 		if(	getInt(&bufferInt) == 0 &&
 			bufferInt >= minimo &&	bufferInt <= maximo){
-			retorno = 1;
+			success = 1;
 			*pResultado = bufferInt;
 			break;
 		}
@@ -105,14 +105,14 @@ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError,	int minimo
 		reintentos--;
 	}while(reintentos>=0);
 
-	return retorno;
+	return success;
 }
 
 // PARA VALIDAR FLOTANTES
 
 int esFlotante(char *string) {
 	int i=0;
-	int retorno = 1;
+	int success = 1;
 	int contadorPuntos=0;
 
 	if (string != NULL && strlen(string) > 0) {
@@ -125,51 +125,51 @@ int esFlotante(char *string) {
 					contadorPuntos++;
 				}
 				else{
-					retorno = 0;
+					success = 0;
 					break;
 				}
 			}
 		}
 	}
-	return retorno;
+	return success;
 }
 
 static int getFloat(float* pResultado){
-	int retorno=-1;
+	int success=-1;
 	char buffer[64];
 
 	if(pResultado != NULL){
 		if(getString(buffer,sizeof(buffer))==0 && esFlotante(buffer)){
 			*pResultado = atof(buffer);
-			retorno = 0;
+			success = 0;
 		}
 	}
-	return retorno;
+	return success;
 }
 
 int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError,
 							float minimo, float maximo, int reintentos){
 	float bufferFloat;
-	int retorno = 0;
+	int success = 0;
 	while(reintentos>=0){
 		reintentos--;
 		printf("%s",mensaje);
 		if(getFloat(&bufferFloat) == 0){
 			if(bufferFloat >= minimo && bufferFloat <= maximo){
 				*pResultado = bufferFloat;
-				retorno = 1;
+				success = 1;
 				break;
 			}
 		}
 		printf("%s",mensajeError);
 	}
-	return retorno;
+	return success;
 }
 
 // PARA VALIDAR CADENAS
 
 int getString(char *string, int longitud) {
-	int retorno=-1;
+	int success=-1;
 	char bufferString[4096];
 
 	if (string != NULL && longitud > 0) {
@@ -181,10 +181,10 @@ int getString(char *string, int longitud) {
 			}
 			if(strnlen(bufferString,sizeof(bufferString)) <= longitud){
 				strncpy(string, bufferString, longitud);
-				retorno=0;
+				success=0;
 			}
 		}
 	}
-	return retorno;
+	return success;
 }
 

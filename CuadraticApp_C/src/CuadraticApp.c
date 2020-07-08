@@ -24,7 +24,7 @@
 
 int main(void) {
 	system("title [#CuadraticApp v1.0.2] - [Codename: CataHache]");
-	system("color F5");
+	system("color FD");
 	system("mode con: cols=65 lines=30");
 	cuatraticApp();
 	return EXIT_SUCCESS;

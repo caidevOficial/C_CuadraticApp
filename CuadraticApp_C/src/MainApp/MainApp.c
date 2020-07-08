@@ -27,7 +27,7 @@
 #include "MainApp.h"
 
 int inputNumbers(int* ax2, int* bx, int* c){
-	int sucess = 0;
+	int success = 0;
 	int A;
 	int B;
 	int C;
@@ -50,13 +50,13 @@ int inputNumbers(int* ax2, int* bx, int* c){
 		*ax2 = A;
 		*bx = B;
 		*c = C;
-		sucess = 1;
+		success = 1;
 	}
-	return sucess;
+	return success;
 }
 
 int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
-	int sucess = 0;
+	int success = 0;
 	int aAux = *ax2;
 	int bAux = *bx;
 	int cAux = *c;
@@ -65,7 +65,7 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 	determinantAux = ((bAux*bAux)-(4*aAux*cAux));
 	if(determinantAux>=0){
 		*determinant = sqrt(determinantAux);
-		sucess = 1;
+		success = 1;
 	}else{
 		printf("    _______________________________________\n");
 		printf("    [Message]: El determinante es negativo,\n"
@@ -73,11 +73,11 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 				"    raiz cuadrada de un negativo,\n"
 				"    por lo tanto posee raices imaginarias!.\n");
 	}
-	return sucess;
+	return success;
 }
 
 int cuatraticApp(){
-	int sucess = 0;
+	int success = 0;
 	int ax2;
 	int bx;
 	int c;
@@ -108,7 +108,7 @@ int cuatraticApp(){
 					printf("    _______________________________________\n");
 					printf("    [ACLARACION]: el puntito es una coma!_\n");
 					printf("    sus raices son [%.2f] y [%.2f] .\n",root1,root2);
-					sucess = 1;
+					success = 1;
 				}
 			}
 			break;
@@ -119,5 +119,5 @@ int cuatraticApp(){
 		system("pause");
 		system("cls");
 	}while(answer=='y');
-	return sucess;
+	return success;
 }

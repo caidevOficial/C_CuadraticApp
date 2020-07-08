@@ -14,7 +14,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.0 [Alpha v1.0.0] - FacuFalcone_[Linux]
+ * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
  * ============================================================================
  */
 
@@ -23,26 +23,30 @@
 #include <stdio.h>
 
 #include "../MainMenu/Menu.h"
-#include "MainApp.h"
 #include "../Validate/caidevValidate.h"
+#include "MainApp.h"
 
 int inputNumbers(int* ax2, int* bx, int* c){
 	int sucess = 0;
 	int A;
 	int B;
 	int C;
-	utn_getNumero(&A, "    Ingrese el termino cuadratico [Ax^2] entre [-100 a 100]: ",
-									"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
+	utn_getNumero(&A, "    [Message]: Ingrese el termino cuadratico [Ax^2]\n"
+					  "    entre [-100 a 100]: ",
+					  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
 	if(A==0){
-		printf("    Si el termino cuadratico es 0, el polinomio pierde su grado 2\n"
-				"    y pasara a ser una formula lineal, no tiene sentido\n"
-				"    seguir pidiendote numeros. Gracias, vuelvas prontos!.\n");
+		printf("    [Message]: Si el termino cuadratico es 0, entonces\n"
+				"    el polinomio pierde su grado 2 y pasara a ser\n"
+				"    una formula lineal, no tiene sentido seguir\n"
+				"    pidiendote numeros. Gracias, vuelvas prontos!.\n");
 	}else{
 
-		utn_getNumero(&B, "    Ingrese el termino Lineal [Bx] entre [-100 a 100]: ",
-						"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-		utn_getNumero(&C, "    Ingrese el termino Independiente [C] entre [-100 a 100]: ",
-				"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
+		utn_getNumero(&B, "    [Message]: Ingrese el termino Lineal [Bx]\n"
+						  "    entre [-100 a 100]: ",
+						  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
+		utn_getNumero(&C, "    [Message]: Ingrese el termino Independiente [C]\n"
+						  "    entre [-100 a 100]: ",
+						  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
 		*ax2 = A;
 		*bx = B;
 		*c = C;
@@ -64,8 +68,10 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 		sucess = 1;
 	}else{
 		printf("    _______________________________________\n");
-		printf("    El determinante es negativo, con lo cual no es posible hallar\n"
-				"    una raiz cuadrada de un negativo, posee raices imaginarias!.\n");
+		printf("    [Message]: El determinante es negativo,\n"
+				"    con lo cual no es posible hallar una\n"
+				"    raiz cuadrada de un negativo,\n"
+				"    por lo tanto posee raices imaginarias!.\n");
 	}
 	return sucess;
 }
@@ -83,15 +89,19 @@ int cuatraticApp(){
 	do{
 		printf("    __________[MANDALE BHASKARA!]__________\n");
 		printf("    ____________[By FacuFalcone]___________\n");
+		printf("    __________[Ax^2 + Bx + C = 0]__________\n");
 		switch(menu()){
 		case 'a':
 			if(!inputNumbers(&ax2, &bx, &c)){
 				printf("    _______________________________________\n");
-				printf("    Ups! Hubo un error con los operandos, por favor reingreselos!.\n");
+				printf("    [Message]: Ups! Pusiste un 0 verdad?\n"
+						"    Chinguenguencha!.\n");
 			}else{
 				if(!calculateDeterminant(&ax2, &bx, &c, &determinant)){
 					printf("    _______________________________________\n");
-					printf("    Ups! Hubo un error con el calculo del determinante, por favor reintentelo!.\n");
+					printf("    [Message]: Ups! Hubo un error con el\n"
+						   "    calculo del determinante, por favor\n"
+						   "    reintentalo!.\n");
 				}else{
 					root1 = ((-bx+determinant)/(2*ax2));
 					root2 = ((-bx-determinant)/(2*ax2));

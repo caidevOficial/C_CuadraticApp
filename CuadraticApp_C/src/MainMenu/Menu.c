@@ -14,7 +14,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.0 [Alpha v1.0.0] - FacuFalcone_[Linux]
+ * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
  * ============================================================================
  */
 

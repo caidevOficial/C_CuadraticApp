@@ -21,6 +21,10 @@
 #ifndef MAINMENU_MENU_H_
 #define MAINMENU_MENU_H_
 
+/**
+ * @brief	Imprime el menu con las opciones del programa.
+ * @return  Retorna la opcion elegida si salio bien, 'x' si error.
+ */
 char menu();
 
 #endif /* MAINMENU_MENU_H_ */

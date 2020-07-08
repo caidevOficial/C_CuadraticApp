@@ -18,8 +18,8 @@
  * ============================================================================
  */
 
-#include <stdio_ext.h> // para linux
-//#include <stdio.h> // windows
+//#include <stdio_ext.h> // para linux
+#include <stdio.h> // windows
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -33,8 +33,8 @@ int myGets(char *string, int longitud) {
 	char bufferString[4096];
 
 	if (string != NULL && longitud > 0) {
-		//fflush(stdin); //Windows
-		__fpurge(stdin); // Linux
+		fflush(stdin); //Windows
+		//__fpurge(stdin); // Linux
 		if(fgets(bufferString,sizeof(bufferString),stdin) != NULL){
 			if(bufferString[strnlen(bufferString,sizeof(bufferString))-1] == '\n'){
 				bufferString[strnlen(bufferString,sizeof(bufferString))-1] = '\0';
@@ -173,8 +173,8 @@ int getString(char *string, int longitud) {
 	char bufferString[4096];
 
 	if (string != NULL && longitud > 0) {
-		//fflush(stdin); //Windows
-		__fpurge(stdin); // Linux
+		fflush(stdin); //Windows
+		//__fpurge(stdin); // Linux
 		if(fgets(bufferString,sizeof(bufferString),stdin) != NULL){
 			if(bufferString[strnlen(bufferString,sizeof(bufferString))-1] == '\n'){
 				bufferString[strnlen(bufferString,sizeof(bufferString))-1] = '\0';

@@ -20,7 +20,7 @@
 
 #include <math.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+#include <stdio.h>
 
 #include "../MainMenu/Menu.h"
 #include "MainApp.h"
@@ -28,18 +28,24 @@
 
 int inputNumbers(int* ax2, int* bx, int* c){
 	int sucess = 0;
-	utn_getNumero(ax2, "    Ingrese el termino cuadratico entre [-100 a 100]: ",
+	int A;
+	int B;
+	int C;
+	utn_getNumero(&A, "    Ingrese el termino cuadratico [Ax^2] entre [-100 a 100]: ",
 									"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-	if(!ax2){
+	if(A==0){
 		printf("    Si el termino cuadratico es 0, el polinomio pierde su grado 2\n"
 				"    y pasara a ser una formula lineal, no tiene sentido\n"
 				"    seguir pidiendote numeros. Gracias, vuelvas prontos!.\n");
 	}else{
 
-		utn_getNumero(bx, "    Ingrese el termino cuadratico entre [-100 a 100]: ",
+		utn_getNumero(&B, "    Ingrese el termino Lineal [Bx] entre [-100 a 100]: ",
 						"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-		utn_getNumero(c, "    Ingrese el termino cuadratico entre [-100 a 100]: ",
-						"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
+		utn_getNumero(&C, "    Ingrese el termino Independiente [C] entre [-100 a 100]: ",
+				"    Numero incorrecto, reintentalo.\n", (-100), 100, 5);
+		*ax2 = A;
+		*bx = B;
+		*c = C;
 		sucess = 1;
 	}
 	return sucess;
@@ -57,6 +63,7 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 		*determinant = sqrt(determinantAux);
 		sucess = 1;
 	}else{
+		printf("    _______________________________________\n");
 		printf("    El determinante es negativo, con lo cual no es posible hallar\n"
 				"    una raiz cuadrada de un negativo, posee raices imaginarias!.\n");
 	}
@@ -74,24 +81,33 @@ int cuatraticApp(){
 	char answer = 'y';
 
 	do{
+		printf("    __________[MANDALE BHASKARA!]__________\n");
+		printf("    ____________[By FacuFalcone]___________\n");
 		switch(menu()){
 		case 'a':
 			if(!inputNumbers(&ax2, &bx, &c)){
+				printf("    _______________________________________\n");
 				printf("    Ups! Hubo un error con los operandos, por favor reingreselos!.\n");
 			}else{
 				if(!calculateDeterminant(&ax2, &bx, &c, &determinant)){
+					printf("    _______________________________________\n");
 					printf("    Ups! Hubo un error con el calculo del determinante, por favor reintentelo!.\n");
 				}else{
 					root1 = ((-bx+determinant)/(2*ax2));
 					root2 = ((-bx-determinant)/(2*ax2));
-					printf("    sus raices son [%.3f] y [%.3f] .\n",root1,root2);
+					printf("    _______________________________________\n");
+					printf("    [ACLARACION]: el puntito es una coma!_\n");
+					printf("    sus raices son [%.2f] y [%.2f] .\n",root1,root2);
 					sucess = 1;
 				}
 			}
 			break;
 		case 'b':
+			answer='n';
 			break;
 		}
+		system("pause");
+		system("cls");
 	}while(answer=='y');
 	return sucess;
 }

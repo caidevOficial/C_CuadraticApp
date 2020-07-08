@@ -19,16 +19,18 @@
  */
 
 #include <stdlib.h>
-#include <stdio_ext.h>
+#include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 #include "Menu.h"
 #include "../Validate/caidevValidate.h"
 
 char menu(){
-	char option;
+	char option = 'x'; // x para expresar el error.
 	printf("    [Ingrese una opcion.]\n"
 			"    [A] Ingresar operandos de la cuadratica.\n"
-			"    [B] Salir.\n");
+			"    [B] Salir.\n"
+			"    [Opcion]: ");
 	getString(&option, sizeof(option));
 	option = tolower(option);
 	return option;

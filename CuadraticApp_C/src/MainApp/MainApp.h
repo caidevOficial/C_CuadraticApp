@@ -21,6 +21,10 @@
 #ifndef MAINAPP_MAINAPP_H_
 #define MAINAPP_MAINAPP_H_
 
+/**
+ * @brief  Ejecuta las funciones principales del programa.
+ * @return Retorna 1 si salio bien, 0 si error.
+ */
 int cuatraticApp();
 
 #endif /* MAINAPP_MAINAPP_H_ */

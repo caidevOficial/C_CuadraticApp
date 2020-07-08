@@ -2,6 +2,8 @@
   
 # CuadraticApp! [Windows version]
 
+![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/cApp02.png)
+
 * Se subiran actualizaciones conforme se valla mejorando la app.
 ## Comenzando 🚀
 

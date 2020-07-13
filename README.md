@@ -2,7 +2,10 @@
   
 # CuadraticApp! [Windows version]
 
-![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/cApp02.png)
+![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/krypton_v1.1.01_1.png)
+![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/krypton_v1.1.01_2.png)
+![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/krypton_v1.1.01_3.png)
+
 
 * Se subiran actualizaciones conforme se valla mejorando la app.
 ## Comenzando 🚀

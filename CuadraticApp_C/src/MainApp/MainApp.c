@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along with
  * ============================================================================
  * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
- * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
+ * Version     : Beta 1.1.01 [Beta v1.1.01] - [Codename: Krypton]
  * ============================================================================
  */
 
@@ -22,6 +22,7 @@
 #include <stdio.h>
 
 #include "../MainMenu/Menu.h"
+#include "../MainApp/Input/InputFunctions.h"
 #include "../Validate/caidevValidate.h"
 #include "MainApp.h"
 
@@ -64,7 +65,8 @@ int cuatraticApp(){
 		case 'a':
 			if(!inputNumbers(&ax2, &bx, &c)){
 				//printf("    º________________________________________________º\n");
-				printf("    º [Message]: Ups! Pusiste un 0 verdad?           º\n"
+				printf("    º________________________________________________º\n"
+					   "    º [Message]: Ups! Pusiste un 0 verdad?           º\n"
 					   "    º Chinguenguencha!.                              º\n");
 			}else{
 				if(!calculateDeterminant(&ax2, &bx, &c, &determinant)){

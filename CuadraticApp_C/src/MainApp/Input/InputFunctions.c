@@ -14,13 +14,14 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
- * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
+ * Version     : Beta 1.1.01 [Beta v1.1.01] - [Codename: Krypton]
  * ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../Validate/caidevValidate.h"
+#include "../../MainMenu/Menu.h"
 
 #include "InputFunctions.h"
 
@@ -28,15 +29,16 @@ int inputNumbers(int* ax2, int* bx, int* c){
 	int success = 0;
 	int rangoMin = -50;
 	int rangoMax = 50;
-
-	getNumberInt(ax2,
+	int auxAX2;
+	getNumberInt(&auxAX2,
 			   "    º [Message]: Ingrese el termino cuadratico       º\n"
 			   "    º [Ax^2] entre [-50 a 50]: ",
 			   "    º [Message]: Numero incorrecto,                  º\n"
 		       "    º reintentalo por favor.                         º\n", (rangoMin), rangoMax, 5);
+	*ax2 = auxAX2;
 	system("cls");
 	mostrarMenuOperandos(ax2,bx,c,1);
-	if(ax2==0){
+	if(!auxAX2){
 		printf("    º [Message]: Si el termino cuadratico es 0,      º\n"
 			   "    º entonces el polinomio pierde su grado 2        º\n"
 			   "    º y pasara a ser una formula lineal, no          º\n"

@@ -14,7 +14,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
- * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
+ * Version     : Beta 1.1.01 [Beta v1.1.01] - [Codename: Krypton]
  * ============================================================================
  */
 

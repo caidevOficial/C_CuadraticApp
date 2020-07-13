@@ -18,14 +18,16 @@
  * ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "MainApp/MainApp.h"
+#ifndef MAINAPP_INPUT_INPUTFUNCTIONS_H_
+#define MAINAPP_INPUT_INPUTFUNCTIONS_H_
 
-int main(void) {
-	system("title [#CuadraticApp v1.1.0] - [Codename: Krypton]");
-	system("color 02"); // BG: Black, Text: Green
-	system("mode con: cols=65 lines=30");
-	cuatraticApp();
-	return EXIT_SUCCESS;
-}
+/**
+ * @brief  Pide al usuario ingresar los 3 terminos.
+ * @param  ax2 Putnero a Termino cuadratico.
+ * @param  bx Puntero a Termino Lineal.
+ * @param  c Puntero a termino indepte.
+ * @return Retorna 1 si pudo ingresar los 3 operandos, 0 para error.
+ */
+int inputNumbers(int* ax2, int* bx, int* c);
+
+#endif /* MAINAPP_INPUT_INPUTFUNCTIONS_H_ */

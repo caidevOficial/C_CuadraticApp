@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
- * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
+ * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
+ * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
  * ============================================================================
  */
 
@@ -27,11 +27,41 @@
 
 char menu(){
 	char option = 'x'; // x para expresar el error.
-	printf("    [Ingrese una opcion.]\n"
-			"    [A] Ingresar operandos de la cuadratica.\n"
-			"    [B] Salir.\n"
-			"    [Opcion]: ");
+	//printf("    ษออออออออออออออออออออออออออออออออออออออป\n");
+	printf("    บ [Ingrese una opcion.]                          บ\n"
+		   "    บ [A] Ingresar operandos del polinomio.          บ\n"
+		   "    บ [B] Salir.                                     บ\n"
+		   "    บ [Opcion]: ");
 	getString(&option, sizeof(option));
 	option = tolower(option);
 	return option;
+}
+
+int mostrarMenuOperandos(int *ax2, int *bx, int *c, int show){
+	int success = 0;
+	printf("    ษออออออออออออออออออออออออออออออออออออออออออออออออป\n"
+		   "    บ                [MANDALE BHASKARA!]             บ\n");
+	printf("    บ                  [By FacuFalcone]              บ\n");
+	if(show>=0 && show<4){
+		switch(show){
+			case 0:
+				printf("    บ             [  Ax^2 +  Bx +   C = 0 ]          บ\n");
+				break;
+			case 1:
+				printf("    บ             [ %3d^2 +  Bx +   C = 0 ]          บ\n",*ax2);
+				printf("    บ               [A^]                             บ\n");
+				break;
+			case 2:
+				printf("    บ             [ %3d^2 + %3d +   C = 0 ]          บ\n",*ax2,*bx);
+				printf("    บ               [A^]    [B^]                     บ\n");
+				break;
+			case 3:
+				printf("    บ             [ %3d^2 + %3d + %3d = 0 ]          บ\n",*ax2,*bx,*c);
+				printf("    บ               [A^]    [B^]  [C^]               บ\n");
+				break;
+		}
+		//printf("    บ________________________________________________บ\n");
+	success = 1;
+	}
+	return success;
 }

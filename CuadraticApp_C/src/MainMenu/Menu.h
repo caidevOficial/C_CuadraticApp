@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
- * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
+ * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
+ * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
  * ============================================================================
  */
 
@@ -26,5 +26,15 @@
  * @return  Retorna la opcion elegida si salio bien, 'x' si error.
  */
 char menu();
+
+/**
+ * @brief  Muestra en pantalla los Terminos ingresados por usuario.
+ * @param  ax2 Puntero a termino cuadratico.
+ * @param  bx Puntero a termino lineal.
+ * @param  c Puntero a termino indepte.
+ * @param  show Muestra los operandos ingresados con 1,2 y 3. 0 para no mostrarlos.
+ * @return Retorna 1 si salio bien, 0 para error.
+ */
+int mostrarMenuOperandos(int *ax2, int *bx, int *c, int show);
 
 #endif /* MAINMENU_MENU_H_ */

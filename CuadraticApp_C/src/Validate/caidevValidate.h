@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
- * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
+ * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
+ * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
  * ============================================================================
  */
 
@@ -55,7 +55,7 @@ int isNumber(char *string, int limite);
  * @param	maximo Es el minimo minimo a ser aceptado
  * @return	Retorna 0 si se obtuvo el numero y -1 si no.
  */
-int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+int getNumberInt(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
 
 /**
  * @brief	Verifica si la cadena ingresada es flotante
@@ -82,7 +82,7 @@ int esFlotante(char *string);
  * @param	maximo Es el minimo minimo a ser aceptado
  * @return	Retorna 0 si se obtuvo el numero flotante y -1 si no
  */
-int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos);
+int getNumberFloat(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos);
 
 /**
  * @brief 	Lee de stdin hasta que encuentra un '\n' o hasta que haya copiado en cadena

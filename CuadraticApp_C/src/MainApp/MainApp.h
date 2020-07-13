@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
- * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
+ * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
+ * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
  * ============================================================================
  */
 

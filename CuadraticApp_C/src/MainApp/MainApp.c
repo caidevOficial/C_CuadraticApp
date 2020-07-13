@@ -11,10 +11,9 @@
  * details.
  *
  * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
- * Name		   : CuatraticApp [Coded in C]
- * Version     : Alpha 1.0.1 [Alpha v1.0.1] - FacuFalcone_[Linux]
+ * Name		   : CuatraticApp [Coded in C] - FacuFalcone_[Linux]
+ * Version     : Beta 1.1.0 [Beta v1.1.0] - [Codename: Krypton]
  * ============================================================================
  */
 
@@ -25,35 +24,6 @@
 #include "../MainMenu/Menu.h"
 #include "../Validate/caidevValidate.h"
 #include "MainApp.h"
-
-int inputNumbers(int* ax2, int* bx, int* c){
-	int success = 0;
-	int A;
-	int B;
-	int C;
-	utn_getNumero(&A, "    [Message]: Ingrese el termino cuadratico [Ax^2]\n"
-					  "    entre [-100 a 100]: ",
-					  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-	if(A==0){
-		printf("    [Message]: Si el termino cuadratico es 0, entonces\n"
-				"    el polinomio pierde su grado 2 y pasara a ser\n"
-				"    una formula lineal, no tiene sentido seguir\n"
-				"    pidiendote numeros. Gracias, vuelvas prontos!.\n");
-	}else{
-
-		utn_getNumero(&B, "    [Message]: Ingrese el termino Lineal [Bx]\n"
-						  "    entre [-100 a 100]: ",
-						  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-		utn_getNumero(&C, "    [Message]: Ingrese el termino Independiente [C]\n"
-						  "    entre [-100 a 100]: ",
-						  "    [Message]: Numero incorrecto, reintentalo.\n", (-100), 100, 5);
-		*ax2 = A;
-		*bx = B;
-		*c = C;
-		success = 1;
-	}
-	return success;
-}
 
 int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 	int success = 0;
@@ -67,57 +37,62 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 		*determinant = sqrt(determinantAux);
 		success = 1;
 	}else{
-		printf("    _______________________________________\n");
-		printf("    [Message]: El determinante es negativo,\n"
-				"    con lo cual no es posible hallar una\n"
-				"    raiz cuadrada de un negativo,\n"
-				"    por lo tanto posee raices imaginarias!.\n");
+		printf("    º________________________________________________º\n"
+			   "    º [Message]: El determinante es negativo,        º\n"
+			   "    º con lo cual no es posible hallar una raiz      º\n"
+			   "    º cuadrada, por lo tanto posee raices            º\n"
+			   "    º imaginarias!.                                  º\n"
+			   "    º________________________________________________º\n");
 	}
+
 	return success;
 }
 
 int cuatraticApp(){
 	int success = 0;
-	int ax2;
-	int bx;
-	int c;
+	int ax2; //Termino cuadratico.
+	int bx;  //Termino lineal.
+	int c;	 //Termino independiente.
 	double determinant;
-	float root1;
-	float root2;
+	float root1; //Raiz x1.
+	float root2; //Raiz x2.
 	char answer = 'y';
 
 	do{
-		printf("    __________[MANDALE BHASKARA!]__________\n");
-		printf("    ____________[By FacuFalcone]___________\n");
-		printf("    __________[Ax^2 + Bx + C = 0]__________\n");
+		mostrarMenuOperandos(&ax2,&bx,&c,0);
 		switch(menu()){
 		case 'a':
 			if(!inputNumbers(&ax2, &bx, &c)){
-				printf("    _______________________________________\n");
-				printf("    [Message]: Ups! Pusiste un 0 verdad?\n"
-						"    Chinguenguencha!.\n");
+				//printf("    º________________________________________________º\n");
+				printf("    º [Message]: Ups! Pusiste un 0 verdad?           º\n"
+					   "    º Chinguenguencha!.                              º\n");
 			}else{
 				if(!calculateDeterminant(&ax2, &bx, &c, &determinant)){
-					printf("    _______________________________________\n");
-					printf("    [Message]: Ups! Hubo un error con el\n"
-						   "    calculo del determinante, por favor\n"
-						   "    reintentalo!.\n");
+					//printf("    º________________________________________________º\n");
+					printf("    º [Message]: Ups! Hubo un error en el calculo    º\n"
+						   "    º del determinante, por favor reintentalo!       º\n");
 				}else{
 					root1 = ((-bx+determinant)/(2*ax2));
 					root2 = ((-bx-determinant)/(2*ax2));
-					printf("    _______________________________________\n");
-					printf("    [ACLARACION]: el puntito es una coma!_\n");
-					printf("    sus raices son [%.2f] y [%.2f] .\n",root1,root2);
+					//printf("    º________________________________________________º\n");
+					printf("    º [ACLARACION]: el puntito es una coma           º\n");
+					printf("    º Sus raices son [%03.2f] y [%03.2f].              º\n",root1,root2);
 					success = 1;
 				}
 			}
+			printf("    º________________________________________________º\n");
 			break;
 		case 'b':
 			answer='n';
 			break;
+		default:
+			printf("    º [Message]:Opcion incorrecta, seleccione [A-B]  º\n");
+			break;
 		}
+		printf("\n");
 		system("pause");
 		system("cls");
 	}while(answer=='y');
+
 	return success;
 }

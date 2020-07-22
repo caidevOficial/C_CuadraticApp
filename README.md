@@ -1,5 +1,10 @@
 ![](https://github.com/caidevOficial/Logos/blob/master/PoseidonDevs.png)
-  
+
+  <!--[![Facu's github stats](https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight)](https://github.com/caidevOficial/tp_laboratorio_1)-->
+<a href="https://github.com/caidevOficial/CuadraticApp_C">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
+</a><br>
+
 # CuadraticApp! [Windows version]
 
 ![](https://github.com/caidevOficial/CuatraticApp_C/blob/master/CuadraticApp_C/Pictures/krypton_v1.1.01_1.png)

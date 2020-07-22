@@ -1,6 +1,7 @@
-![](https://github.com/caidevOficial/Logos/blob/master/PoseidonDevs.png)
+<!--[](https://github.com/caidevOficial/Logos/blob/master/PoseidonDevs.png)-->
+<img align="center" src="https://github.com/caidevOficial/Logos/blob/master/PoseidonDevs.png"/><br>
 
-  <!--[![Facu's github stats](https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight)](https://github.com/caidevOficial/tp_laboratorio_1)-->
+<!--[![Facu's github stats](https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight)](https://github.com/caidevOficial/tp_laboratorio_1)-->
 <a href="https://github.com/caidevOficial/CuadraticApp_C">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
 </a><br>

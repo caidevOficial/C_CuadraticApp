@@ -23,8 +23,8 @@
 #include "MainApp/MainApp.h"
 
 int main(void) {
-	system("title [#CuadraticApp v1.1.0] - [Codename: Krypton]");
-	system("color 02"); // BG: Black, Text: Green
+	system("title [#CuadraticApp v1.1.1] - [Codename: Neptune]");
+	system("color 09"); // BG: Black, Text: LightBlue
 	system("mode con: cols=65 lines=30");
 	cuatraticApp();
 	return EXIT_SUCCESS;

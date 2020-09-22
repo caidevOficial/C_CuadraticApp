@@ -48,15 +48,15 @@ int mostrarMenuOperandos(int *ax2, int *bx, int *c, int show){
 				printf("    º             [  Ax^2 +  Bx +   C = 0 ]          º\n");
 				break;
 			case 1:
-				printf("    º             [ %3d^2 +  Bx +   C = 0 ]          º\n",*ax2);
+				printf("    º             [%3dx^2 +  Bx +   C = 0 ]          º\n",*ax2);
 				printf("    º               [A^]                             º\n");
 				break;
 			case 2:
-				printf("    º             [ %3d^2 + %3d +   C = 0 ]          º\n",*ax2,*bx);
+				printf("    º             [%3dx^2 +%3dx +   C = 0 ]          º\n",*ax2,*bx);
 				printf("    º               [A^]    [B^]                     º\n");
 				break;
 			case 3:
-				printf("    º             [ %3d^2 + %3d + %3d = 0 ]          º\n",*ax2,*bx,*c);
+				printf("    º             [%3dx^2 +%3dx + %3d = 0 ]          º\n",*ax2,*bx,*c);
 				printf("    º               [A^]    [B^]  [C^]               º\n");
 				break;
 		}

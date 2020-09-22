@@ -50,6 +50,7 @@ int calculateDeterminant(int* ax2, int* bx, int*c, double* determinant){
 }
 
 int cuatraticApp(){
+	setbuf(stdout,NULL);
 	int success = 0;
 	int ax2; //Termino cuadratico.
 	int bx;  //Termino lineal.
@@ -57,6 +58,8 @@ int cuatraticApp(){
 	double determinant;
 	float root1; //Raiz x1.
 	float root2; //Raiz x2.
+	float xVertice; // Vertice X
+	float yVertice; // Vertice Y
 	char answer = 'y';
 
 	do{
@@ -64,21 +67,27 @@ int cuatraticApp(){
 		switch(menu()){
 		case 'a':
 			if(!inputNumbers(&ax2, &bx, &c)){
-				//printf("    º________________________________________________º\n");
 				printf("    º________________________________________________º\n"
 					   "    º [Message]: Ups! Pusiste un 0 verdad?           º\n"
 					   "    º Chinguenguencha!.                              º\n");
 			}else{
 				if(!calculateDeterminant(&ax2, &bx, &c, &determinant)){
-					//printf("    º________________________________________________º\n");
 					printf("    º [Message]: Ups! Hubo un error en el calculo    º\n"
 						   "    º del determinante, por favor reintentalo!       º\n");
 				}else{
+					// Calculo los 4 elementos.
 					root1 = ((-bx+determinant)/(2*ax2));
 					root2 = ((-bx-determinant)/(2*ax2));
-					//printf("    º________________________________________________º\n");
+					xVertice = (float)(-bx)/(2*ax2);
+					yVertice = (ax2*(pow(xVertice,2)) + (bx*xVertice) + c);
+
 					printf("    º [ACLARACION]: el puntito es una coma           º\n");
-					printf("    º Sus raices son [%03.2f] y [%03.2f].              º\n",root1,root2);
+					printf("    º Raices:                                        º\n"
+						   "    º X1: [%05.2f].                                   º\n",root1);
+					printf("    º X2: [%05.2f].                                   º\n",root2);
+					printf("    º Vertices:                                      º\n"
+						   "    º Xv: [%05.2f].                                   º\n",xVertice);
+					printf("    º Yv: [%05.2f].                                   º\n",yVertice);
 					success = 1;
 				}
 			}

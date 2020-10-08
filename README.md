@@ -2,9 +2,17 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
 </a><br>
 
+```c
+int startCourse(){
+    printf("Keep lLearning and Coding!");
+    printf("Suscribe to my GitHub!");
+    return 0;
+}
+```
+
 # CuadraticApp! [Windows version]
 
-![](https://github.com/caidevOficial/CuadraticApp_C/blob/master/CuadraticApp_C/Pictures/cuadraticApp_C.png)
+ <img src="https://github.com/caidevOficial/CuadraticApp_C/blob/master/CuadraticApp_C/Pictures/cuadraticApp_C.png" height = "250" weight = "350"/>
 
 * Se subiran actualizaciones conforme se valla mejorando la app.
 

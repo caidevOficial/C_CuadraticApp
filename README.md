@@ -1,6 +1,7 @@
 <a href="https://github.com/caidevOficial/CuadraticApp_C">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
-</a><br>
+</a><br><br>
+
 
 ```c
 int startCourse(){

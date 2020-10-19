@@ -66,7 +66,7 @@ Este proyecto está bajo la Licencia [GNU GENERAL PUBLIC LICENSE v3.0] - mira el
 
 ## Tecnologías usadas al momento. 📌
 <!-- C -->
-|<a href="https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)/"><img align="center" alt="C" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/c-logo.png" width="100px" height="100px" />|<h3>C</h3>|
+|<a href="https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)/"><img align="center" alt="C" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/logo-c.png" width="100px" height="100px" />|<h3>C</h3>|
 |--------|----------|
 
 ## Expresiones de Gratitud 🎁

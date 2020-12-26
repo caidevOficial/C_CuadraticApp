@@ -13,8 +13,6 @@ int startCourse(){
 
 # CuadraticApp! [Windows version]
 
- <img src="https://github.com/caidevOficial/CuadraticApp_C/blob/master/CuadraticApp_C/Pictures/cuadraticApp_C.png" height = "250" weight = "350"/>
-
 * Se subiran actualizaciones conforme se valla mejorando la app.
 
 ### Pre-requisitos 📋
@@ -25,28 +23,15 @@ _Que cosas necesitas para correr el software y como hacerlo._
 Para ejecutar el "exe" de CuadraticApp! [Windows version], Necesitas linux (Mentira, Windows!).
 ```
 
-### Pequeña interfaz del programa ⌨️
-
-_Loading..._
-
-```
-Conforme avancen las versiones, se mejorara la interfaz.
-```
-
-## Construido con Eclipse v20.06 [4.16.0]🛠️
+## Construido con Eclipse v20.12 [4.18.0]🛠️
 
 _Herramientas utilizadas para crear estos proyectos_
 
 * [Eclipse](https://www.eclipse.org/) 
 _en sus versiones_:
 ```
-[v20.06 - 4.16.0](Build id: 20200615-1200) - El IDE usado en la version Linux / Windows para CuadraticApp! [Windows version].
+[v20.12 - 4.18.0](Build id: 20201210-1552) - El IDE usado para CuadraticApp! [Windows version].
 ```
-
-## Versionado 📌
-
-Quiza se implemente [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles.
-
 
 ## Releases 📌
 

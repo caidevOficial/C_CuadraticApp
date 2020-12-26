@@ -20,7 +20,7 @@
 #include "MainApp/MainApp.h"
 
 int main(void) {
-	system("title [#CuadraticApp v1.1.1] - [Codename: Neptune]");
+	system("title [#CuadraticApp v1.2.0] - [Codename: NeptuneV2]");
 	system("color 09"); // BG: Black, Text: LightBlue
 	system("mode con: cols=65 lines=30");
 	cuatraticApp();

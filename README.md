@@ -49,7 +49,7 @@ _Estos proyectos al día de hoy tienen un solo y único autor_
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia [GNU GENERAL PUBLIC LICENSE v3.0] - mira el archivo [LICENSE.md](LICENSE) para detalles
+Este proyecto está bajo la Licencia [MIT] - mira el archivo [LICENSE.md](LICENSE) para detalles
 
 ## Tecnologías usadas al momento. 📌
 <!-- C -->
